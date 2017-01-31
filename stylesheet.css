@@ -1,3 +1,4 @@
+/* CSS included in all pages.*/
 .background{
   background-image: url("img/chocolate.jpg");
   position: fixed;
@@ -5,29 +6,85 @@
   background-size: cover;
   width:100%;
   height:100%;
-  filter: blur(5px);
+  filter: blur(5px) grayscale(50%);
 }
 
 #header{
-  padding: 40px;
+  padding: 20px;
   margin-bottom: 50px;
-  opacity:0.8;
-}
-
-#logo{
-font-size: 500%;
-font-family: lobster, monospace;
+  opacity:0.6;
 }
 
 #footer{
-  opacity:0.8;
+  opacity:0.6;
   position:inherit;
   margin-bottom:0;
   padding:15px;
   text-align: center;
+}
+/*-----------------------------------------------*/
+
+/* CSS for index */
+#logo{
+  height: 100px;
+  width: 250px;
+/*font-size: 500%;
+font-family: Lobster, tahoma;*/
+}
+
+#info{
+  margin-bottom:100px;
+  text-align:center;
+  font-family: lobster, tahoma;
+  color:black;
+  opacity:0.6;
+}
+
+#input{
+  margin-bottom: 100px;
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#chain{
+  margin-bottom:100px;
+  margin-left: auto;
+  margin-right: auto;
+  height:100px;
+  width:auto;
 }
 
 .social{
   padding:30px;
   font-size: 200%;
 }
+/*------------------------------------------*/
+
+/* CSS for selection. */
+#chooser{
+  opacity:0.6;
+}
+
+.checkbox{
+  font-size: 15px;
+  padding:10px;
+}
+/*------------------------------------------*/
+
+/* CSS for shop */
+#shoppingList{
+  opacity:0.6;
+  margin-bottom:100px;
+}
+
+/*------------------------------------------*/
+
+/* CSS for chart */
+#shoppingCart{
+  opacity: 0.6;
+  margin-bottom:100px;
+}
+
+
+/*-----------------------------------------*/
