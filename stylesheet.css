@@ -10,38 +10,76 @@
 }
 
 #header{
-  padding: 20px;
+
   margin-bottom: 50px;
   opacity:0.6;
 }
-
-#footer{
-  opacity:0.6;
-  position:inherit;
-  margin-bottom:0;
-  padding:15px;
-  text-align: center;
-}
-/*-----------------------------------------------*/
-
-/* CSS for index */
 #logo{
-  height: 100px;
+  margin-left: 15px
+  height: 90px;
   width: 250px;
 /*font-size: 500%;
 font-family: Lobster, tahoma;*/
 }
 
-#info{
-  margin-bottom:100px;
-  text-align:center;
+#logoText{
+  padding-top:25px;
+  padding-bottom:25px;
+  padding-left:205px;
   font-family: lobster, tahoma;
   color:black;
-  opacity:0.6;
 }
 
+#itemsShow{
+  margin-top:20px;
+  margin-right:25px;
+  padding:25px;
+  font-size: 30px;
+  font-family: lobster, tahoma;
+}
+
+#onlyCart{
+  padding-top: 30px;
+  margin-left:245px;
+  height:90px;
+  width:100px;
+}
+
+#footer{
+  opacity:0.6;
+  /*position:inherit;*/
+  margin-bottom:0;
+  padding:15px;
+  text-align: center;
+}
+
+#secondView{
+  display:none;
+}
+/*-----------------------------------------------*/
+
+/* CSS for index */
+
+#pics{
+  width:500px;
+  height:300px;
+  margin:auto;
+  margin-bottom: 50px;
+
+
+}
+
+#pics img{
+  margin: auto;
+  height:200px;
+  width:265px;
+  margin-bottom: 20px;
+
+}
+
+
 #input{
-  margin-bottom: 100px;
+  margin-bottom: 90px;
   width: 600px;
   margin-left: auto;
   margin-right: auto;

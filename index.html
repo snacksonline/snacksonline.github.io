@@ -18,35 +18,81 @@
 <body>
     <div class="background"></div>
 
-    <header id="header" class="navbar navbar-default hidden">
-        <div class="container">
-            <div class="navbar-header">
-                <a href="#"><img id="logo" src="img/logo.png"></a>
-            </div>
+    <header id="header">
+        <div class="navbar navbar-default">
+            <a class="navbar-brand" href="#"><img id="logo" src="img/logo.png"></a>
+            <h1 id="logoText" class="navbar-text">Beställ dina snacks direkt hem till soffan!</h1>
+            <img id="onlyCart" class="navbar" src="img/onlyCart.png">
+            <p id="itemsShow" class="navbar-right"></p>
         </div>
     </header>
 
-    <section class="container">
-        <div>
-            <div id="info" class="well hidden">
-                <h1 id="infoText">Beställ dina snacks direkt hem till soffan!</h1>
-            </div>
+    <section id="firstView">
+        <div class="container">
+                <div id="pics" class="hidden carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#pics" data-slide-to="0" class="active"></li>
+                        <li data-target="#pics" data-slide-to="1"></li>
+                        <li data-target="#pics" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner" role="listbox">
+                        <div class="item active">
+                            <img src="img/cart.png">
+                        </div>
+                        <div class="item">
+                            <img src="img/car.png">
+                        </div>
+                        <div class="item">
+                            <img src="img/pop.png">
+                        </div>
+                        <a class="left carousel-control" href="#pics" role="button" data-slide="prev"></a>
+                        <a class="right carousel-control" href="#pics" role="button" data-slide="next"></a>
+                    </div>
+                  </div>
+                    <div class="hidden">
+                        <div id="input" class="input-group input-group-lg">
+                            <input type="text" class="form-control" placeholder="Postnummer">
+                            <span class="input-group-btn">
+                        <button id="searchBtn" class="btn btn-secondary" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+                      </span>
+                        </div>
+                    </div>
 
-            <div class="hidden">
-                <div id="input" class="input-group input-group-lg">
-                    <input type="text" class="form-control" placeholder="Postnummer">
-                    <span id="searchBtn" class="input-group-addon"><i class="fa fa-search" aria-hidden="true"></i></span>
+            </div>
+    </section>
+
+    <section id="secondView">
+        <div class="container">
+            <div id="chooser" class="row hidden">
+                <div class="col-md-3 well">
+                    <div class="checkbox">
+                        <label><input type="checkbox" value="">#1</label>
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox" value="">#2</label>
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox" value="">#3</label>
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox" value="">#4</label>
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox" value="">#5</label>
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox" value="">#6</label>
+                    </div>
                 </div>
-            </div>
-
-            <div class="hidden">
-                <img id="chain" src="img/chain.png">
+                <div class="col-md-9 well">
+                    <!-- här skall det hämtas butiker -->
+                </div>
             </div>
         </div>
     </section>
 
     <footer id="footer" class="navbar navbar-bottom navbar-default hidden">
-        <div class="continer-fluid">
+        <div class="continer">
             <div class="navbar-footer">
                 <a class="social" href="#"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
                 <a class="social" href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
@@ -61,4 +107,3 @@
 </body>
 
 </html>
-tml>
