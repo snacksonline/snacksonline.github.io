@@ -1,108 +1,100 @@
+/*lobster font*/
+@font-face {
+  font-family: lobster;
+  src:url("res/Lobster 1.4.otf");
+}
+
+
 /* CSS included in all pages.*/
 .background{
-  background-image: url("img/chocolate.jpg");
+  background-image: url("img/realpopV2.png");
+  background-color: hotpink;
   position: fixed;
   z-index:-1;
   background-size: cover;
   width:100%;
   height:100%;
-  filter: blur(5px) grayscale(50%);
+  /*filter: blur(5px) grayscale(50%);*/
 }
 
-#header{
-
-  margin-bottom: 50px;
-  opacity:0.6;
+.navbar{
+  opacity:0.8;
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+    text-align: center;
 }
+
 #logo{
-  margin-left: 15px
   height: 90px;
   width: 250px;
-/*font-size: 500%;
-font-family: Lobster, tahoma;*/
 }
 
 #logoText{
-  padding-top:25px;
-  padding-bottom:25px;
-  padding-left:205px;
-  font-family: lobster, tahoma;
+  font-size: 300%;
+  font-family: lobster;
   color:black;
 }
 
-#itemsShow{
-  margin-top:20px;
-  margin-right:25px;
-  padding:25px;
-  font-size: 30px;
-  font-family: lobster, tahoma;
-}
-
 #onlyCart{
-  padding-top: 30px;
-  margin-left:245px;
   height:90px;
   width:100px;
 }
 
-#footer{
-  opacity:0.6;
-  /*position:inherit;*/
-  margin-bottom:0;
-  padding:15px;
-  text-align: center;
+#itemsShow{
+
+  margin-top:20px;
+  font-size: 30px;
+  font-family: lobster;
 }
 
 #secondView{
   display:none;
-}
-/*-----------------------------------------------*/
-
-/* CSS for index */
-
-#pics{
-  width:500px;
-  height:300px;
-  margin:auto;
-  margin-bottom: 50px;
-
-
-}
-
-#pics img{
-  margin: auto;
-  height:200px;
-  width:265px;
-  margin-bottom: 20px;
-
-}
-
-
-#input{
-  margin-bottom: 90px;
-  width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-#chain{
-  margin-bottom:100px;
-  margin-left: auto;
-  margin-right: auto;
-  height:100px;
-  width:auto;
 }
 
 .social{
   padding:30px;
   font-size: 200%;
 }
+
+.stuff{
+  opacity: 0.8;
+  border:2px solid black;
+  background-color: white;
+  border-radius: 10%;
+  font-family: lobster;
+}
+/*-----------------------------------------------*/
+
+/* CSS for index */
+
+.carousel{
+  width:400px;
+  height:270px;
+  margin:auto;
+  margin-top: 20px;
+  margin-bottom: 150px;
+}
+
+.carousel-indicators {
+  opacity: 0;
+}
+
+.carousel img{
+  margin: auto;
+  margin-bottom: 20px;
+
+}
+
+#input{
+  margin: auto;
+  margin-bottom: 90px;
+  width: 600px;
+}
+
 /*------------------------------------------*/
 
 /* CSS for selection. */
-#chooser{
-  opacity:0.6;
-}
 
 .checkbox{
   font-size: 15px;
@@ -111,18 +103,9 @@ font-family: Lobster, tahoma;*/
 /*------------------------------------------*/
 
 /* CSS for shop */
-#shoppingList{
-  opacity:0.6;
-  margin-bottom:100px;
-}
 
 /*------------------------------------------*/
 
 /* CSS for chart */
-#shoppingCart{
-  opacity: 0.6;
-  margin-bottom:100px;
-}
-
 
 /*-----------------------------------------*/

@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
     <link rel="stylesheet" type="text/css" href="res/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="res/font-awesome-4.7.0/css/font-awesome.min.css">
-    <link href="http://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+    <!--  <link href="http://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css"> -->
     <title>SnacksOnline</title>
     <!-- [if lt IE 9]>
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -18,89 +18,95 @@
 <body>
     <div class="background"></div>
 
-    <header id="header">
-        <div class="navbar navbar-default">
-            <a class="navbar-brand" href="#"><img id="logo" src="img/logo.png"></a>
-            <h1 id="logoText" class="navbar-text">Beställ dina snacks direkt hem till soffan!</h1>
-            <img id="onlyCart" class="navbar" src="img/onlyCart.png">
-            <p id="itemsShow" class="navbar-right"></p>
+    <header>
+
+
+        <div class="container-fluid navbar navbar-default">
+            <a href="#"><img id="logo" src="img/logo.png"></a>
+            <h1 id="logoText">Beställ dina snacks direkt hem till soffan!</h1>
+
+            <img id="onlyCart" src="img/onlyCart.png">
+            <p id="itemsShow"></p>
+
         </div>
     </header>
 
     <section id="firstView">
         <div class="container">
-                <div id="pics" class="hidden carousel slide" data-ride="carousel">
-                    <ol class="carousel-indicators">
-                        <li data-target="#pics" data-slide-to="0" class="active"></li>
-                        <li data-target="#pics" data-slide-to="1"></li>
-                        <li data-target="#pics" data-slide-to="2"></li>
-                    </ol>
-                    <div class="carousel-inner" role="listbox">
-                        <div class="item active">
-                            <img src="img/cart.png">
-                        </div>
-                        <div class="item">
-                            <img src="img/car.png">
-                        </div>
-                        <div class="item">
-                            <img src="img/pop.png">
-                        </div>
-                        <a class="left carousel-control" href="#pics" role="button" data-slide="prev"></a>
-                        <a class="right carousel-control" href="#pics" role="button" data-slide="next"></a>
+            <div class="hidden carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#pics" data-slide-to="0" class="active"></li>
+                    <li data-target="#pics" data-slide-to="1"></li>
+                    <li data-target="#pics" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                        <img src="img/cart68.png">
                     </div>
-                  </div>
-                    <div class="hidden">
-                        <div id="input" class="input-group input-group-lg">
-                            <input type="text" class="form-control" placeholder="Postnummer">
-                            <span class="input-group-btn">
+                    <div class="item">
+                        <img src="img/car68.png">
+                    </div>
+                    <div class="item">
+                        <img src="img/pop68.png">
+                    </div>
+                    <a class="left carousel-control" href="#pics" role="button" data-slide="prev"></a>
+                    <a class="right carousel-control" href="#pics" role="button" data-slide="next"></a>
+                </div>
+            </div>
+            <div class="hidden">
+                <div id="input" class="input-group input-group-lg">
+                    <input type="text" class="form-control" placeholder="Postnummer">
+                    <span class="input-group-btn">
                         <button id="searchBtn" class="btn btn-secondary" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
                       </span>
-                        </div>
-                    </div>
-
+                </div>
             </div>
+
+        </div>
     </section>
 
     <section id="secondView">
         <div class="container">
-            <div id="chooser" class="row hidden">
-                <div class="col-md-3 well">
+            <div class="row hidden">
+                <div class="stuff col-md-3">
                     <div class="checkbox">
-                        <label><input type="checkbox" value="">#1</label>
+                        <label><input type="checkbox" value="">Sweet</label>
                     </div>
                     <div class="checkbox">
-                        <label><input type="checkbox" value="">#2</label>
+                        <label><input type="checkbox" value="">Chocolate</label>
                     </div>
                     <div class="checkbox">
-                        <label><input type="checkbox" value="">#3</label>
+                        <label><input type="checkbox" value="">Snacks</label>
                     </div>
                     <div class="checkbox">
-                        <label><input type="checkbox" value="">#4</label>
+                        <label><input type="checkbox" value="">Fruits</label>
                     </div>
                     <div class="checkbox">
-                        <label><input type="checkbox" value="">#5</label>
+                        <label><input type="checkbox" value="">Healthy Snacks</label>
                     </div>
                     <div class="checkbox">
-                        <label><input type="checkbox" value="">#6</label>
+                        <label><input type="checkbox" value="">Nuts</label>
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox" value="">Special Offer</label>
                     </div>
                 </div>
-                <div class="col-md-9 well">
+                <div class="stuff col-md-8 col-md-offset-1">
                     <!-- här skall det hämtas butiker -->
                 </div>
             </div>
         </div>
     </section>
 
-    <footer id="footer" class="navbar navbar-bottom navbar-default hidden">
-        <div class="continer">
-            <div class="navbar-footer">
-                <a class="social" href="#"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
-                <a class="social" href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                <a class="social" href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-            </div>
-        </div>
+
+    <footer class="navbar navbar-bottom navbar-default hidden">
+        <div class="conatiner-fluid">
+            <a class="social" href="#"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+            <a class="social" href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            <a class="social" href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
         </div>
     </footer>
+
     <script src="res/jquery-3.1.1.min.js"></script>
     <script src="res/bootstrap.min.js"></script>
     <script src="main.js"></script>
