@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -17,22 +17,27 @@
 
 <body>
     <div class="background"></div>
-
+    <!-- Section for header -->
     <header>
-
-
         <div class="container-fluid navbar navbar-default">
-            <a href="#"><img id="logo" src="img/logo.png"></a>
-            <h1 id="logoText">Beställ dina snacks direkt hem till soffan!</h1>
 
-            <img id="onlyCart" src="img/onlyCart.png">
+            <a href="#"><img id="logo" src="img/logo.png"></a>
+            <h1 id="logoText" class="hidden-xs hidden-sm">Beställ dina snacks direkt hem till soffan!</h1>
+            <a href="#">
+                <img id="onlyCart" class="hidden-xs" src="img/onlyCart.png">
+            </a>
+
             <p id="itemsShow"></p>
 
         </div>
     </header>
 
+    <!-- Section for the firstView -->
     <section id="firstView">
         <div class="container">
+
+            <!-- Bort med carousel
+
             <div class="hidden carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
                     <li data-target="#pics" data-slide-to="0" class="active"></li>
@@ -53,63 +58,345 @@
                     <a class="right carousel-control" href="#pics" role="button" data-slide="next"></a>
                 </div>
             </div>
-            <div class="hidden">
+          -->
+
+            <div class="row hidden">
                 <div id="input" class="input-group input-group-lg">
                     <input type="text" class="form-control" placeholder="Postnummer">
                     <span class="input-group-btn">
                         <button id="searchBtn" class="btn btn-secondary" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
                       </span>
                 </div>
+                <img id="chain" class="hidden-xs hidden-sm" src="img/chain.png">
             </div>
 
         </div>
     </section>
 
+    <!-- Section for the secondView -->
     <section id="secondView">
         <div class="container">
-            <div class="row hidden">
+            <div class="row">
                 <div class="stuff col-md-3">
-                    <div class="checkbox">
-                        <label><input type="checkbox" value="">Sweet</label>
-                    </div>
-                    <div class="checkbox">
-                        <label><input type="checkbox" value="">Chocolate</label>
-                    </div>
                     <div class="checkbox">
                         <label><input type="checkbox" value="">Snacks</label>
                     </div>
                     <div class="checkbox">
-                        <label><input type="checkbox" value="">Fruits</label>
+                        <label><input type="checkbox" value="">Nötter</label>
                     </div>
                     <div class="checkbox">
-                        <label><input type="checkbox" value="">Healthy Snacks</label>
+                        <label><input type="checkbox" value="">Naturgodis</label>
                     </div>
                     <div class="checkbox">
-                        <label><input type="checkbox" value="">Nuts</label>
+                        <label><input type="checkbox" value="">Godis</label>
                     </div>
                     <div class="checkbox">
-                        <label><input type="checkbox" value="">Special Offer</label>
+                        <label><input type="checkbox" value="">Choklad</label>
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox" value="">Chips</label>
                     </div>
                 </div>
                 <div class="stuff col-md-8 col-md-offset-1">
                     <!-- här skall det hämtas butiker -->
+                    <p>1</p>
+                    <a href="#">
+                        <p>2</p>
+                        <div class="shop">
+                            <p>3</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section for the thirdView -->
+    <section id="thirdView">
+        <div class="container">
+            <div class="row">
+                <div id="theMall" class="stuff col-md-offset-2 col-md-8">
+                    <button id="testbtn">test</button>
+                    <!--
+                    <div class="theShop">
+                        <div class="shopItem">
+
+                        </div>
+                        <div class="numbers">
+                            <p class="price">price</P>
+                            <input class="quantity" type="number">
+                            <button class="add"><i class="fa fa-cart-plus" aria-hidden="true"></i></button>
+                        </div>
+                    </div>
+              -->
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section for the forthView -->
+    <section id="forthView">
+        <div class="container">
+            <div id="kontaktinfo" class="stuff">
+                <div class="row">
+                    <input id="fname" class="form" type="text" placeholder="Namn*">
+                    <input id="lName" class="form" type="text" placeholder="Efternamn*">
+                </div>
+                <div class="row">
+                    <input id="adress" class="form" type="text" placeholder="Adress*">
+                    <input id="postNum" class="form" type="text" placeholder="Postnummer*">
+                </div>
+                <div class="row">
+                    <input id="tel" class="form" type="text" placeholder="Telefonnummer*">
+                    <input id="mail" class="form" type="text" placeholder="e-post">
+                </div>
+                <div class="row">
+                    <input id="floor" class="form tf" type="text" placeholder="Våning">
+                    <input id="lghNum" class="form tf" type="text" placeholder="Lägenhetsnummer">
+                    <input id="pKod" class="form tf" type="text" placeholder="Portkod">
+                </div>
+                <div id="confirmationStuffs">
+                    <div id="confirm">
+                        <label><input type="radio" name="sMail" checked>Jag vill få bekräftelse via sms</label>
+                        <label><input type="radio" name="sMail">Jag vill få bekräftelse via e-post</label>
+                    </div>
+                    <p style="font-size: 20px">* = Obligatoriskt</p>
+                    <button class="btn btn-primary"><i class="fa fa-money" aria-hidden="true"></i>Pay bitch!</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section for the admin login page -->
+    <section id="adminLog">
+        <div class="container">
+            <div class="row">
+                <div class="stuff col-md-6 col-md-offset-3">
+                    <form>
+                        <input type="text" placeholder="Användarnamn">
+                        <input type="text" placeholder="Lösenord">
+                        <button id="confirmLogBtn" class="btn btn-primary adminBtn">Logga in</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section for the main admin page -->
+    <section id="adminMain">
+        <div class="container">
+            <div class="row">
+                <div class="stuff col-md-6 col-md-offset-3 col-xs-12">
+                    <h2>Vad vill du göra?</h2>
+                    <button id="toShops" class="btn btn-primary adminBtn">Lägg till butik</button>
+                    <button id="toSnacks" class="btn btn-primary adminBtn">Lägg till snacks</button>
+                    <button id="removeShop" class="btn btn-warning adminBtn">Ta bort en butik</button>
+                    <button id="removeSnack" class="btn btn-warning adminBtn">Ta bort snacks från butik</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section for adminastrating shops -->
+    <section id="adminButik">
+        <div class="container">
+            <div class="row">
+                <div class="stuff col-md-6 col-md-offset-3">
+                    <h2>Lägg till butik</h2>
+                    <input id="setButik" type="text" placeholder="Butiksnamn">
+                    <input id="setPnum" type="number" placeholder="postnummer">
+                    <input id="setOrt" type="text" placeholder="Ort">
+                    <input id="setAdress" type="text" placeholder="Adress">
+                    <input id="setTnum" type="number" placeholder="telefonnummer">
+                    <button id="saveShop" class="btn btn-primary adminBtn">Spara</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section for removing shops -->
+    <section id="shopRemoval">
+        <div class="container">
+            <div class="row">
+                <div class="stuff col-md-6 col-md-offset-3">
+                    <h5>Välj butik att ta bort:</h5>
+                    <select class="shopSelect">
+                      <option value="allt">allt</option>
+                      <option value="är">är</option>
+                      <option value="skit">skit</option>
+                    </select>
+                    <button id="deleteShop" class="btn btn-danger adminBtn">Radera butiken?</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="snacksRemoval">
+        <div class="container">
+            <div class="row">
+                <div class="stuff col-md-6 col-md-offset-3">
+                    <h5>Välj butik att ta bort snacks ifrån:</h5>
+                    <select class="shopSelect">
+                      <option value="allt">allt</option>
+                      <option value="är">är</option>
+                      <option value="skit">skit</option>
+                    </select>
+                    <h5>Välj sockerbomb att radera</h5>
+                    <select>
+                      <option value="apokalypsens">apokalypsens</option>
+                      <option value="svarta">svarta</option>
+                      <option value="änglar">ängalar</option>
+                    </select>
+                    <button id="deleteSnack" class="btn btn-danger adminBtn">Radera sockerbomben?</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section for administrating snacks -->
+    <section id="adminSnacks">
+        <div class="container">
+            <div class="row">
+                <div class="stuff col-md-6 col-md-offset-3">
+                    <h2>Lägg till snacks</h2>
+                    <h5>Välj butik att uppdatera:</h5>
+                    <select class="shopSelect">
+                      <option value="allt">allt</option>
+                      <option value="är">är</option>
+                      <option value="skit">skit</option>
+                    </select>
+                    <h5>Specifiera produkten:</h5>
+                    <div class="radio">
+                        <div class="radio">
+                            <label><input type="radio" name="snackChoise" value="snacks">Snacks</label>
+                        </div>
+                        <div class="radio">
+                            <label><input type="radio" name="snackChoise" value="nötter">Nötter</label>
+                        </div>
+                        <div class="radio">
+                            <label><input type="radio" name="snackChoise" value="naturgodis">Naturgodis</label>
+                        </div>
+                        <div class="radio">
+                            <label><input type="radio" name="snackChoise" value="godis">Godis</label>
+                        </div>
+                        <div class="radio">
+                            <label><input type="radio" name="snackChoise" value="choklad">Choklad</label>
+                        </div>
+                        <div class="radio">
+                            <label><input type="radio" name="snackChoise" value="chips">Chips</label>
+                        </div>
+                    </div>
+                    <input id="prodNamn" type="text" placeholder="Produktnamn">
+                    <input id="varMark" type="text" placeholder="Varumärke">
+                    <input id="pris" type="number" placeholder="Pris">
+                    <button id="saveSnacks" class="btn btn-primary adminBtn">Spara</button>
                 </div>
             </div>
         </div>
     </section>
 
 
-    <footer class="navbar navbar-bottom navbar-default hidden">
-        <div class="conatiner-fluid">
+    <!-- Sections for footer info -->
+    <section id="vanligaFragor">
+        <div class="container">
+            <div class="row">
+                <div class="stuff col-md-6 col-md-offset-3">
+                    <h2>Vanliga Frågor</h2>
+                    <p>Hur kopplar man frontend och backend?</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontakt">
+        <div class="container">
+            <div class="row">
+                <div class="stuff col-md-6 col-md-offset-3">
+                    <h2>Kontakt</h2>
+                    <p>Telefon: 9876-54 32 10</p>
+                    <p>Mail:kontakt@snacksonline.github.io</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="omOss">
+        <div class="container">
+            <div class="row">
+                <div class="stuff col-md-6 col-md-offset-3">
+                    <h2>Om oss</h2>
+                    <p>Ett gäng studenter som irrar runt</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="jobb">
+        <div class="container">
+            <div class="row">
+                <div class="stuff col-md-6 col-md-offset-3">
+                    <h2>Jobb</h2>
+                    <p>Sökes: Frontend guru.</p>
+                    <p>Lön: Höga stressnivåer.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="hjalp">
+        <div class="container">
+            <div class="row">
+                <div class="stuff col-md-6 col-md-offset-3">
+                    <h2>Hjälp?</h2>
+                    <p>Ring 112</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Section for footer -->
+    <footer class="foot container-fluid navbar navbar-bottom navbar-default">
+
+        <a href="#">
+            <p id="vanligaFragorBtn" class="info"><i class="fa fa-question" aria-hidden="true"></i>Vanliga frågor</p>
+        </a>
+        <a href="#">
+            <p id="kontaktBtn" class="info"><i class="fa fa-phone" aria-hidden="true"></i>Kontakt</p>
+        </a>
+        <a href="#">
+            <p id="omOssBtn" class="info"><i class="fa fa-exclamation" aria-hidden="true"></i>Om oss</p>
+        </a>
+
+        <div>
             <a class="social" href="#"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
             <a class="social" href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
             <a class="social" href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
         </div>
+        <a href="#">
+            <p id="jobbBtn" class="info"><i class="fa fa-smile-o" aria-hidden="true"></i>Jobb</p>
+        </a>
+        <a href="#">
+            <p id="hjalpBtn" class="info"><i class="fa fa-handshake-o" aria-hidden="true"></i>Hjälp</p>
+        </a>
+
+        <a href="#">
+            <p id="loggaIn" class="info"><i class="fa fa-user" aria-hidden="true"></i>Logga in</p>
+            <p id="loggaUt" class="info"><i class="fa fa-user" aria-hidden="true"></i>Logga ut</p>
+        </a>
+
+
     </footer>
 
+    <!-- Importing usfull scripts -->
     <script src="res/jquery-3.1.1.min.js"></script>
     <script src="res/bootstrap.min.js"></script>
     <script src="main.js"></script>
+
 </body>
 
 </html>
