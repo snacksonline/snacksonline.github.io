@@ -4,6 +4,13 @@
   src:url("res/Lobster 1.4.otf");
 }
 
+/*html{
+  position:relative;
+  min-height: 100%
+}
+body{
+  margin-bottom: 100px;
+}*/
 
 /* CSS included in all pages.*/
 .background{
@@ -48,11 +55,8 @@
   font-family: lobster;
 }
 
-footer{
-  margin-top: 40px;
-  }
-
 .foot{
+  margin-top:60px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -70,7 +74,7 @@ footer{
 
 .stuff{
   background: rgba(255, 255, 255, 0.5) !important;
-  border:2px solid black;
+  /*border:2px solid black;*/
   background-color: white;
   border-radius: 10%;
   font-family: lobster;
