@@ -1,4 +1,3 @@
-//var urlForShops = "http:mardby.se/AJK15G/animals_json.php?";
 var items = 0;
 
 
@@ -12,12 +11,21 @@ $(document).ready(function() {
         $("#secondView,#firstView").toggle();
     });
 
+    /* This function should have searched for diffrent "Postnummer",
+    but now just holds a placeholder url that console logs the result */
+    $("#searchInput").on("keyup", function() {
+        var inputText = $("#searchInput").val();
+        $.getJSON("https://jsonplaceholder.typicode.com/posts/" + inputText, function(data) {
+            console.log(data.title);
+        });
+    });
 
     $("#shopTable").on("click", ".shop", function() {
         var choosenShop = $(this).attr('id');
-        console.log(choosenShop);
         $("#secondView,#thirdView").toggle();
+        $('#theMall').append('<img id="waitABit" src="http://i.imgur.com/yM5pI7W.gif">');
         $.getJSON("http:mardby.se/AJK15G/animals_json.php?animalId=" + choosenShop, function(data) {
+            $('#waitABit').remove();
             $("#theMall").append('<div class="Shop"><div class="shopItem"><img style="width: 140px;height: 140px;border-radius:10%" src="' + data.animal.img_src + '"></div><div class="numbers"><p class="price">' + data.animal.name + '</P><input class="quantity" type="number"><button class="add"><i class="fa fa-cart-plus" aria-hidden="true"></i></button></div></div>')
         });
     });
@@ -47,7 +55,6 @@ $(document).ready(function() {
     */
     $.getJSON("https://learnwebcode.github.io/json-example/animals-1.json", function(data) {
         for (i = 0; i < data.length; i++) {
-            console.log(data[i].name);
             $(".shopShopSelect").append('<option class="shopListOfShops" value="' + data[i].name + '">' + data[i].name + '</option>');
             $("#snackShopSelector").append('<option class="snackListOfShops" value="' + data[i].name + '">' + data[i].name + '</option>');
         }
@@ -75,13 +82,14 @@ $(document).ready(function() {
     // Function for displaying shops that hold checked candy
     function appendShop(urlForShops, classTag) {
         $.getJSON(urlForShops, function(shopData) {
+            $('#waitABit').remove();
             $('#shopTable').append('<a href="#"><div id="' + shopData.animalId + '" class="shop ' + classTag + '" ><h3>' + shopData.animal.name + '</h3><p>' + shopData.animal.description + '</p></div></a>');
-            console.log(shopData.animalId);
         });
     }
 
     // Removes unchecked snaks from the shopTable element
     function removeShopFromList(classTag) {
+        $('#waitABit').remove();
         $(classTag).remove();
     }
 
@@ -90,14 +98,19 @@ $(document).ready(function() {
         names should be self explanatory
      */
     $("#snackBox").click(function() {
+        $('#shopTable').append('<img id="waitABit" src="http://i.imgur.com/yM5pI7W.gif">');
         if ($('#snackBox').is(":checked")) {
             appendShop("http:mardby.se/AJK15G/animals_json.php?animalId=1", "snackTag");
+
+            /* Kod för att demonstrera wait a bit loading gif ifall det inte syns under redovisning */
+            // appendShop("lorem_text_slow.php", "snackTag");
         } else {
             removeShopFromList(".snackTag");
         }
     });
 
     $("#notBox").click(function() {
+        $('#shopTable').append('<img id="waitABit" src="http://i.imgur.com/yM5pI7W.gif">');
         if ($('#notBox').is(":checked")) {
             appendShop("http:mardby.se/AJK15G/animals_json.php?animalId=2", "notTag");
         } else {
@@ -107,6 +120,7 @@ $(document).ready(function() {
 
 
     $("#naturBox").click(function() {
+        $('#shopTable').append('<img id="waitABit" src="http://i.imgur.com/yM5pI7W.gif">');
         if ($('#naturBox').is(":checked")) {
             appendShop("http:mardby.se/AJK15G/animals_json.php?animalId=3", "naturTag");
         } else {
@@ -116,6 +130,7 @@ $(document).ready(function() {
 
 
     $("#godisBox").click(function() {
+        $('#shopTable').append('<img id="waitABit" src="http://i.imgur.com/yM5pI7W.gif">');
         if ($('#godisBox').is(":checked")) {
             appendShop("http:mardby.se/AJK15G/animals_json.php?animalId=4", "godisTag");
         } else {
@@ -125,6 +140,7 @@ $(document).ready(function() {
 
 
     $("#cocoBox").click(function() {
+        $('#shopTable').append('<img id="waitABit" src="http://i.imgur.com/yM5pI7W.gif">');
         if ($('#cocoBox').is(":checked")) {
             appendShop("http:mardby.se/AJK15G/animals_json.php?animalId=5", "cocoTag");
         } else {
@@ -134,6 +150,7 @@ $(document).ready(function() {
 
 
     $("#chipsBox").click(function() {
+        $('#shopTable').append('<img id="waitABit" src="http://i.imgur.com/yM5pI7W.gif">');
         if ($('#chipsBox').is(":checked")) {
             appendShop("http:mardby.se/AJK15G/animals_json.php?animalId=6", "chipsTag");
         } else {
